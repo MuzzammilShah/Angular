@@ -3,7 +3,16 @@
 <main>
     <ul id="users">
         <li>
-            <app-user />
+            <app-user [icon] = "projects[0].icon" [name] = "projects[0].name" />
+        </li>
+        <li>
+            <app-user [icon] = "projects[1].icon" [name] = "projects[1].name" />
+        </li>
+        <li>
+            <app-user [icon] = "projects[2].icon" [name] = "projects[2].name" />
+        </li>
+        <li>
+            <app-user [icon] = "projects[3].icon" [name] = "projects[3].name" />
         </li>
     </ul>
 </main>

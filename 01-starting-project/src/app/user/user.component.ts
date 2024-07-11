@@ -1,8 +1,4 @@
-import { Component } from '@angular/core';
-
-import { PROJECT_LISTS } from '../project-lists';
-
-const randomselect = Math.floor(Math.random() * PROJECT_LISTS.length);
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-user',
@@ -12,13 +8,15 @@ const randomselect = Math.floor(Math.random() * PROJECT_LISTS.length);
   styleUrl: './user.component.css'
 })
 export class UserComponent {
-  selectedProject = PROJECT_LISTS[randomselect];
+  
+  @Input() icon !: string;
+  @Input() name !: string;
 
-  get getProjectsList(){
-    return 'assets/projectlogos/' + this.selectedProject.icon
+  get projectsList() {
+    return 'assets/projectlogos/' + this.icon;
   }
 
   onSelectProject() {
-    console.log("Clicked!")
+    
   }
 }

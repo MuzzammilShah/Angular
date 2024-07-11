@@ -9,7 +9,12 @@ div {
     align-items: center;
     gap: 0.5rem;
     padding: 0.35rem 0.5rem;
-    background-color: #016ab5;
+    /* background-color: #016ab5; */
+    background: linear-gradient(
+      to bottom,
+      #0a1d36,
+      #016ab5
+    );
     color: white;
     border: none;
     font: inherit;
@@ -24,11 +29,12 @@ div {
   .active {
     /* background-color: white;
     color: #004c83; */
-    background: linear-gradient(
+    background: #016ab5;
+    /* background: linear-gradient(
       to bottom,
       #0a1d36,
       #016ab5
-    );
+    ); */
     color: white;
   }
   
