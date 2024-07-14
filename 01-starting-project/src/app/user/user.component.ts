@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-user',
@@ -9,14 +9,16 @@ import { Component, Input } from '@angular/core';
 })
 export class UserComponent {
   
-  @Input() icon !: string;
-  @Input() name !: string;
+  @Input({ required:true }) id !: string;
+  @Input({ required:true }) icon !: string;
+  @Input({ required:true }) name !: string;
+  @Output() selectproject = new EventEmitter();
 
   get projectsList() {
     return 'assets/projectlogos/' + this.icon;
   }
 
   onSelectProject() {
-    
+    this.selectproject.emit(this.id)
   }
 }
