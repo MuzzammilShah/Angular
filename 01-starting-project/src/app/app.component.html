@@ -4,27 +4,35 @@
     <ul id="users">
         <li>
             <app-user 
-                [id]="projects[0].id" 
-                [icon]="projects[0].icon" 
-                [name]="projects[0].name" />
+                [project]="projects[0]" (selectproject)="onSelectProject($event)"
+            />
         </li>
         <li>
             <app-user 
-                [id]="projects[1].id" 
-                [icon]="projects[1].icon" 
-                [name]="projects[1].name" />
+                [project]="projects[1]" (selectproject)="onSelectProject($event)"
+            />
         </li>
         <li>
             <app-user 
-                [id]="projects[2].id" 
-                [icon]="projects[2].icon" 
-                [name]="projects[2].name" />
+                [project]="projects[2]" (selectproject)="onSelectProject($event)"
+            />
         </li>
         <li>
             <app-user 
-                [id]="projects[3].id" 
-                [icon]="projects[3].icon" 
-                [name]="projects[3].name" />
+                [project]="projects[3]" (selectproject)="onSelectProject($event)"
+            />
+        </li>
+        <li>
+            <app-user 
+                [project]="projects[4]" (selectproject)="onSelectProject($event)"
+            />
+        </li>
+        <li>
+            <app-user 
+                [project]="projects[5]" (selectproject)="onSelectProject($event)"
+            />
         </li>
     </ul>
+
+    <app-details [name]="selectedProject?.name"></app-details>
 </main>

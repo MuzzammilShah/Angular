@@ -9,16 +9,18 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class UserComponent {
   
-  @Input({ required:true }) id !: string;
-  @Input({ required:true }) icon !: string;
-  @Input({ required:true }) name !: string;
-  @Output() selectproject = new EventEmitter();
+  @Input({ required:true }) project !: {
+    id: string;
+    name: string;
+    icon: string;
+  };
+  @Output() selectproject = new EventEmitter<string>();
 
   get projectsList() {
-    return 'assets/projectlogos/' + this.icon;
+    return 'assets/projectlogos/' + this.project.icon;
   }
 
   onSelectProject() {
-    this.selectproject.emit(this.id)
+    this.selectproject.emit(this.project.id)
   }
 }
