@@ -1,38 +1,18 @@
 <app-header />
 
 <main>
-    <ul id="users">
-        <li>
-            <app-user 
-                [project]="projects[0]" (selectproject)="onSelectProject($event)"
-            />
-        </li>
-        <li>
-            <app-user 
-                [project]="projects[1]" (selectproject)="onSelectProject($event)"
-            />
-        </li>
-        <li>
-            <app-user 
-                [project]="projects[2]" (selectproject)="onSelectProject($event)"
-            />
-        </li>
-        <li>
-            <app-user 
-                [project]="projects[3]" (selectproject)="onSelectProject($event)"
-            />
-        </li>
-        <li>
-            <app-user 
-                [project]="projects[4]" (selectproject)="onSelectProject($event)"
-            />
-        </li>
-        <li>
-            <app-user 
-                [project]="projects[5]" (selectproject)="onSelectProject($event)"
-            />
-        </li>
+    <ul id="projects">
+        @for (i of projects; track i.id){
+            <li>
+                <app-user [project]="i" (selectproject)="onSelectProject($event)"/>
+            </li>
+        }
     </ul>
 
-    <app-details [name]="selectedProject?.name"></app-details>
+    @if (selectedProject){
+        <app-details [name]="selectedProject.name"/>
+    }
+    @else {
+        <p id="fallback">Select a project to view it's details!</p>
+    }
 </main>

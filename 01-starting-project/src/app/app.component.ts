@@ -14,7 +14,7 @@ import { PROJECT_LISTS } from './project-lists';
 export class AppComponent {
   projects = PROJECT_LISTS;
 
-  selectedProjectId = 'p1';
+  selectedProjectId ?: string;
 
   get selectedProject() {
     return this.projects.find((project) => project.id === this.selectedProjectId);

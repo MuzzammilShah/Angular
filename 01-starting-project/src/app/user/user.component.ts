@@ -1,5 +1,12 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
+interface Project {
+  id: string;
+  title: string;
+  name: string;
+  icon: string;
+}
+
 @Component({
   selector: 'app-user',
   standalone: true,
@@ -9,11 +16,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class UserComponent {
   
-  @Input({ required:true }) project !: {
-    id: string;
-    name: string;
-    icon: string;
-  };
+  @Input({ required:true }) project !: Project;
   @Output() selectproject = new EventEmitter<string>();
 
   get projectsList() {
