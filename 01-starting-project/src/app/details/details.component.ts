@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
+import { DetailComponent } from "./detail/detail.component";
 
 @Component({
   selector: 'app-details',
   standalone: true,
-  imports: [],
+  imports: [DetailComponent],
   templateUrl: './details.component.html',
   styleUrl: './details.component.css'
 })
