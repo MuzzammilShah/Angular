@@ -17,6 +17,7 @@ interface Project {
 export class UserComponent {
   
   @Input({ required:true }) project !: Project;
+  @Input({ required:true }) selected !: Boolean;
   @Output() selectproject = new EventEmitter<string>();
 
   get projectsList() {

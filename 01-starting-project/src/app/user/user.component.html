@@ -1,6 +1,6 @@
 <div>
-    <button (click)="onSelectProject()">
+    <button [class.active]="selected" (click)="onSelectProject()">
         <img [src]="projectsList" [alt]="project.title" />
-        <span>{{ project.title }}</span>
+        <span [class.active]="selected">{{ project.title }}</span>
     </button>
 </div>

@@ -28,7 +28,7 @@ div {
   .active {
     background: #067fd6;
     color: #00223a;
- 
+    font-weight: bold;
   }
 
   button:hover span{

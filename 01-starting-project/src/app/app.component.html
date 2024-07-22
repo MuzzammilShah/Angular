@@ -4,7 +4,7 @@
     <ul id="projects">
         @for (i of projects; track i.id){
             <li>
-                <app-user [project]="i" (selectproject)="onSelectProject($event)"/>
+                <app-user [project]="i" [selected]="i.id === selectedProjectId" (selectproject)="onSelectProject($event)"/>
             </li>
         }
     </ul>
