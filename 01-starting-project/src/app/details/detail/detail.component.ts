@@ -1,4 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+
+interface Task {
+  id:string,
+  projectId:string,
+  title:string,
+  summary:string
+}
 
 @Component({
   selector: 'app-detail',
@@ -8,5 +15,5 @@ import { Component } from '@angular/core';
   styleUrl: './detail.component.css'
 })
 export class DetailComponent {
-
+  @Input({ required:true }) task!: Task;
 }

@@ -7,16 +7,13 @@
         </menu>
     </header>
 
-    <ul>
-        <li>
-            <app-detail/>
-        </li>
-    </ul>
-    <ul>
-        <li>
-            <app-detail/>
-        </li>
-    </ul>
+    @for (i of selectedProjectDetails; track i.id){
+        <ul>
+            <li>
+                <app-detail [task]="i"/>
+            </li>
+        </ul>
+    }
 
 </section>
 

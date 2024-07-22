@@ -3,11 +3,7 @@
     border-radius: 8px;
     max-height: 60vh;
     overflow: auto;
-    background: linear-gradient(
-      to bottom,
-      #012d67,
-      #016ab5
-    );
+    background-color: #021b3c;
   }
   
   header {
@@ -23,6 +19,7 @@
     font-size: 0.9rem;
     width: 60%;
     text-wrap: balance;
+    color: #067fd6;
   }
   
   menu {

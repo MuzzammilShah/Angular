@@ -1,7 +1,13 @@
 article {
     padding: 1rem;
-    color: black;
-    background-color: white;
+    /* color: black;
+    background-color: white; */
+    color: white;
+    background: linear-gradient(
+      to bottom,
+      #012d67,
+      #016ab5
+    );
   }
   
   h2 {

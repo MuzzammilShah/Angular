@@ -10,7 +10,7 @@
     </ul>
 
     @if (selectedProject){
-        <app-details [name]="selectedProject.name"/>
+        <app-details [projectId]="selectedProject.id" [name]="selectedProject.name"/>
     }
     @else {
         <p id="fallback">Select a project to view it's details!</p>
