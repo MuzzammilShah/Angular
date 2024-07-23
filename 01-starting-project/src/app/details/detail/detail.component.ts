@@ -1,10 +1,12 @@
 import { Component, Input } from '@angular/core';
 
+
 interface Task {
   id:string,
   projectId:string,
   title:string,
-  summary:string
+  summary:string,
+  completed:boolean
 }
 
 @Component({
@@ -16,4 +18,8 @@ interface Task {
 })
 export class DetailComponent {
   @Input({ required:true }) task!: Task;
+
+  toggleCompletion() {
+    this.task.completed = !this.task.completed;
+  }
 }
