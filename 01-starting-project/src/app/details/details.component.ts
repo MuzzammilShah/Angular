@@ -1,10 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { DetailComponent } from "./detail/detail.component";
+import { NewDetailComponent } from './new-detail/new-detail.component';
 
 @Component({
   selector: 'app-details',
   standalone: true,
-  imports: [DetailComponent],
+  imports: [DetailComponent, NewDetailComponent],
   templateUrl: './details.component.html',
   styleUrl: './details.component.css'
 })
@@ -12,6 +13,7 @@ export class DetailsComponent {
 
   @Input ({ required: true }) projectId !: string;
   @Input ({ required: true }) name !: string;
+  isAddingDetail = false;
 
   details = [
     {
@@ -60,6 +62,14 @@ export class DetailsComponent {
 
   get selectedProjectDetails() {
     return this.details.filter((detail) => detail.projectId === this.projectId);
+  }
+
+  onSelectNewDetails() {
+    this.isAddingDetail = true;
+  }
+
+  onCancelAddDetail() {
+    this.isAddingDetail = false;
   }
 
 }

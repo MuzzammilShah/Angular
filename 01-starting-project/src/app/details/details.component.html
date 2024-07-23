@@ -1,9 +1,12 @@
-<section id="details">
+@if (isAddingDetail) {
+    <app-new-detail (cancel)="onCancelAddDetail()" />
+}
 
+<section id="details">
     <header>
         <h2>{{ name }}</h2>
         <menu>
-            <button>New Funtionality</button>
+            <button (click)="onSelectNewDetails()">New Funtionality</button>
         </menu>
     </header>
 
@@ -16,4 +19,3 @@
     }
 
 </section>
-
