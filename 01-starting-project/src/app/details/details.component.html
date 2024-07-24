@@ -1,5 +1,5 @@
 @if (isAddingDetail) {
-    <app-new-detail (cancel)="onCancelAddDetail()" />
+    <app-new-detail (cancel)="onCancelAddDetail()" (add)="onAddNewDetail($event)"/>
 }
 
 <section id="details">

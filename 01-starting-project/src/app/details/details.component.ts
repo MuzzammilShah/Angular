@@ -72,4 +72,16 @@ export class DetailsComponent {
     this.isAddingDetail = false;
   }
 
+  onAddNewDetail(detailData: {title:string; summary:string;}) {
+    this.details.unshift({
+      id: new Date().getTime().toString(),
+      projectId:this.projectId,
+      title:detailData.title,
+      summary:detailData.summary,
+      completed:false
+    })
+
+    this.isAddingDetail = false;
+  }
+
 }
