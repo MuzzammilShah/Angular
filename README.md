@@ -1,8 +1,14 @@
 # Angular Specialization Project Outlet
 
 ---
+NOTE: I've been updating this GitHub project as an outlet for the Course on Angular I've been doing. I'll be adding newer projects or updating the existing ones as I continue with my Angular learning anytime during my upskilling journey.
 
+I've added two parts to this README notes:
+1. Steps to update the repo (As a personal note to myself)
+2. The actual installation steps to execute the project
 
+Happy coding!
+---
 ## Steps for a Smooth Update Flow
 
 ### 1. Navigate to Project Directory
