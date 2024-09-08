@@ -9,7 +9,11 @@ div {
     align-items: center;
     gap: 0.5rem;
     padding: 0.35rem 0.5rem;
-    background-color: #016ab5;
+    background: linear-gradient(
+      to bottom,
+      #012d67,
+      #016ab5
+    );
     color: white;
     border: none;
     font: inherit;
@@ -22,14 +26,13 @@ div {
   button:hover,
   button:active,
   .active {
-    /* background-color: white;
-    color: #004c83; */
-    background: linear-gradient(
-      to bottom,
-      #0a1d36,
-      #016ab5
-    );
-    color: white;
+    background: #067fd6;
+    color: #00223a;
+    font-weight: bold;
+  }
+
+  button:hover span{
+    font-weight: bold;
   }
   
   img {

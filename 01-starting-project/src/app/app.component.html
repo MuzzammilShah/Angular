@@ -1,9 +1,18 @@
 <app-header />
 
 <main>
-    <ul id="users">
-        <li>
-            <app-user />
-        </li>
+    <ul id="projects">
+        @for (i of projects; track i.id){
+            <li>
+                <app-user [project]="i" [selected]="i.id === selectedProjectId" (selectproject)="onSelectProject($event)"/>
+            </li>
+        }
     </ul>
+
+    @if (selectedProject){
+        <app-details [projectId]="selectedProject.id" [name]="selectedProject.name"/>
+    }
+    @else {
+        <p id="fallback">Select a project to view it's pending tasks!</p>
+    }
 </main>

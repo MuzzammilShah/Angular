@@ -1,28 +1,60 @@
-### My Angular specialization project outlet!
+# Angular Specialization Project Outlet
 
-##STEPS I NEED TO FOLLOW TO ENSURE SMOOTH FLOW OF UPDATE:
+---
+NOTE: I've been updating this GitHub project as an outlet for the Course on Angular I've been doing. I'll be adding newer projects or updating the existing ones as I continue with my Angular learning anytime during my upskilling journey.
 
-#### 1. Navigate to project directory:
-    In Personal PC- cd project-app1
-    In Other PC- cd Angular
+I've added two parts to this README notes:
+1. Steps to update the repo (As a personal note to myself)
+2. The actual installation steps to execute the project
 
-After making all the changes
+Happy coding!
+---
+## Steps for a Smooth Update Flow
 
-#### 2. Pushing the changes 
-    ```bash
+### 1. Navigate to Project Directory
+- **Personal PC:** 
+    ```sh
+    cd project-app1
+    ```
+- **Other PC:** 
+    ```sh
+    cd Angular
+    ```
+
+### 2. Push Changes
+- **Select all files in the directory:**
+    ```sh
     git add .
     ```
-    ```bash
+- **Set a commit message:**
+    ```sh
     git commit -m "Your commit message"
     ```
-    ```bash
+- **Push the code:**
+    ```sh
     git push origin main
     ```
-All done!
 
-#### 3. In order to recieve the newly added changes:
-    ```bash
+### 3. Pull Newly Added Changes
+    ```sh
     git pull origin main
     ```
 
-### All Done! Work Hard, Have Fun and Make History!! 
+All done! Work hard, have fun, and make history!
+
+---
+
+## Prerequisite Installations
+
+### 1. Install Node.js
+
+### 2. Install Angular CLI
+    ```sh
+    npm install -g @angular/cli
+    ```
+
+### 3. Install Dependencies (Only for `01-starting-project`)
+- **Navigate to the directory and run:**
+    ```sh
+    npm install
+    ```

@@ -1,8 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
-import { PROJECT_LISTS } from '../project-lists';
-
-const randomselect = Math.floor(Math.random() * PROJECT_LISTS.length);
+interface Project {
+  id: string;
+  title: string;
+  name: string;
+  icon: string;
+}
 
 @Component({
   selector: 'app-user',
@@ -12,13 +15,16 @@ const randomselect = Math.floor(Math.random() * PROJECT_LISTS.length);
   styleUrl: './user.component.css'
 })
 export class UserComponent {
-  selectedProject = PROJECT_LISTS[randomselect];
+  
+  @Input({ required:true }) project !: Project;
+  @Input({ required:true }) selected !: Boolean;
+  @Output() selectproject = new EventEmitter<string>();
 
-  get getProjectsList(){
-    return 'assets/projectlogos/' + this.selectedProject.icon
+  get projectsList() {
+    return 'assets/projectlogos/' + this.project.icon;
   }
 
   onSelectProject() {
-    console.log("Clicked!")
+    this.selectproject.emit(this.project.id)
   }
 }

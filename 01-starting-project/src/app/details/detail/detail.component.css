@@ -1,0 +1,57 @@
+article {
+    padding: 1rem;
+    /* color: black;
+    background-color: white; */
+    color: white;
+    background: linear-gradient(
+      to bottom,
+      #012d67,
+      #016ab5
+    );
+  }
+  
+  h2 {
+    margin: 0;
+    color: #067fd6;
+  }
+  
+  time {
+    color: black;
+  }
+  
+  .actions {
+    text-align: right;
+    margin: 0;
+  }
+  
+  .actions button {
+    font: inherit;
+    font-size: 0.9rem;
+    cursor: pointer;
+    background-color: #012d67;
+    color: white;
+    border-radius: 4px;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .actions button:hover,
+  .actions button:active {
+    background: #067fd6;
+    color: white;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+  }
+
+  .actions .tick-mark {
+    color: #012d67;
+    font-size: 1.5em;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .actions .tick-mark:hover {
+    transform: scale(1.2);
+  }

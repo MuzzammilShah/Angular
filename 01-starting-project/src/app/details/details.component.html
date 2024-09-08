@@ -1,0 +1,21 @@
+@if (isAddingDetail) {
+    <app-new-detail (cancel)="onCancelAddDetail()" (add)="onAddNewDetail($event)"/>
+}
+
+<section id="details">
+    <header>
+        <h2>{{ name }}</h2>
+        <menu>
+            <button (click)="onSelectNewDetails()">New Funtionality</button>
+        </menu>
+    </header>
+
+    @for (i of selectedProjectDetails; track i.id){
+        <ul>
+            <li>
+                <app-detail [task]="i"/>
+            </li>
+        </ul>
+    }
+
+</section>

@@ -1,6 +1,6 @@
 <div>
-    <button (click)="onSelectProject()">
-        <img [src]="getProjectsList" />
-        <span>{{ selectedProject.name }}</span>
+    <button [class.active]="selected" (click)="onSelectProject()">
+        <img [src]="projectsList" [alt]="project.title" />
+        <span [class.active]="selected">{{ project.title }}</span>
     </button>
 </div>
